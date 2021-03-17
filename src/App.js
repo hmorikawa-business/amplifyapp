@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 function App() {
   return (
@@ -15,11 +16,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          hoge
         </a>
       </header>
+      <AmplifySignOut />
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
